@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>830</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Communication</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="SPIRadioButton">
+         <property name="text">
+          <string>SPI</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="I2CRadioButton">
+         <property name="text">
+          <string>I2C</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>240</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Working Area</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTabWidget" name="worAreaTabWidget">
+         <property name="currentIndex">
+          <number>3</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Register W/R</string>
+          </attribute>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="title">
+              <string>Register Operation Panel</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QTableWidget" name="regOpTableWidget">
+                <property name="showGrid">
+                 <bool>false</bool>
+                </property>
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>Block Address</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Reg Address</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Hex Value</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Test and Trim</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2">
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>EFUSE List</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QTableWidget" name="efuseOpTableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="efuseReadAllPushButton">
+                  <property name="text">
+                   <string>Read All</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="efuseWriteAllPushButton">
+                  <property name="text">
+                   <string>Write All</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="title">
+              <string>Test and Trim Panel</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QPushButton" name="unlockPushButton">
+                <property name="text">
+                 <string>Unlock</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="testTrimTableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>ADC</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="title">
+              <string>ADC Values</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QTableWidget" name="adcValueTableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="readAllADCPushButton">
+                <property name="text">
+                 <string>Read All ADCs</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="title">
+              <string>ADC Regs</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QTableWidget" name="adcRegTableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>Status Configuration</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QGroupBox" name="groupBox_8">
+             <property name="title">
+              <string>Global</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QTableWidget" name="globalCfgTableWidget">
+                <attribute name="horizontalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <attribute name="verticalHeaderVisible">
+                 <bool>false</bool>
+                </attribute>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>新建列</string>
+                 </property>
+                </column>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="softResetPushButton">
+                <property name="text">
+                 <string>Software Reset</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <widget class="QGroupBox" name="groupBox_9">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string>SIDAC</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_12">
+                <item>
+                 <widget class="QTableWidget" name="sidacTableWidget">
+                  <attribute name="horizontalHeaderVisible">
+                   <bool>true</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>true</bool>
+                  </attribute>
+                  <row>
+                   <property name="text">
+                    <string>EN</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>MPD_MODE</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>DAC_GAIN</string>
+                   </property>
+                  </row>
+                  <column>
+                   <property name="text">
+                    <string>SIDAC0</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>SIDAC1</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>SIDAC2</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>SIDAC3</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_10">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string>Others</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_13">
+                <item>
+                 <widget class="QTableWidget" name="dacCodeTableWidget">
+                  <attribute name="horizontalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <row>
+                   <property name="text">
+                    <string>新建行</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>新建行</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>新建行</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>新建行</string>
+                   </property>
+                  </row>
+                  <column>
+                   <property name="text">
+                    <string>新建列</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>新建列</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>新建列</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>新建列</string>
+                   </property>
+                  </column>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <item>
+                   <widget class="QCheckBox" name="disBCLKCheckBox">
+                    <property name="text">
+                     <string>DIS_BCLK</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="enLDOCheckBox">
+                    <property name="text">
+                     <string>EN_LDO</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="TIAVModeCheckBox">
+                    <property name="text">
+                     <string>TIA_VMODE</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_11">
+                  <property name="title">
+                   <string>ISNS_LNA</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QRadioButton" name="radioButton">
+                     <property name="text">
+                      <string>LNA</string>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="radioButton_2">
+                     <property name="text">
+                      <string>RSNS</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="radioButton_3">
+                     <property name="text">
+                      <string>BUCK_SNS</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_12">
+                  <property name="title">
+                   <string>BUCK_FREQ</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QRadioButton" name="buckFreq4MRadioButton">
+                     <property name="text">
+                      <string>4MHz</string>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="buckFreq2MRadioButton">
+                     <property name="text">
+                      <string>2MHz</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
