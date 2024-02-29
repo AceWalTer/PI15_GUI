@@ -1,4 +1,14 @@
 # This Python file uses the following encoding: utf-8
+"""
+    @File: test.py \n
+    @Contact: kaun.wang@pisemi.com \n
+    @License: (C)Copyright {} \n
+    @Modify Time: 2024/2/29 14:54 \n
+    @Author: Kuan Wang \n
+    @Version: 1.0 \n
+    @Description: None \n
+    @Create Time: 2024/2/29 14:54 \n
+"""
 import sys
 #import math
 import hid
@@ -114,7 +124,8 @@ class GUIMainWindow(QMainWindow):
         regValue = self.ui.regOpTableWidget.cellWidget(id, 2).text()
 
         if len(blockAddr) != 0 and len(regAddr) != 0 and len(regValue) != 0:
-            PI15WriteReg(self.hidBdg, int(blockAddr, 16), int(regAddr, 16), list(bytearray.fromhex(regValue)))
+            PI15WriteReg(self.hidBdg, int(blockAddr, 16), int(regAddr, 16), int(regValue, 16))
+            # PI15WriteReg(self.hidBdg, int(blockAddr, 16), int(regAddr, 16), list(bytearray.fromhex(regValue)))
             self.statusBar().showMessage("Write Into the Register")
         else:
             self.statusBar().showMessage("Errors happens!")
@@ -380,7 +391,7 @@ class GUIMainWindow(QMainWindow):
                 if self.hidStatus == False:
                     self.hidBdg.open(0x1A86, 0xFE07)  # VendorID/ProductID
                     self.statusBar().showMessage("open hid successfully")
-                    self.hidBdg.set_nonblocking(1)  # hid device enable non-blocking modepp
+                    # self.hidBdg.set_nonblocking(1)  # hid device enable non-blocking modepp
                     self.hidStatus = True
                     return self.hidStatus
                 else:

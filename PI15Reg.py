@@ -1,5 +1,14 @@
 # This Python file uses the following encoding: utf-8
-
+"""
+    @File: test.py \n
+    @Contact: kaun.wang@pisemi.com \n
+    @License: (C)Copyright {} \n
+    @Modify Time: 2024/2/29 14:54 \n
+    @Author: Kuan Wang \n
+    @Version: 1.0 \n
+    @Description: None \n
+    @Create Time: 2024/2/29 14:54 \n
+"""
 from pi20_drvier import *
 
 PI15_SPI = 0
@@ -78,6 +87,7 @@ def PI15ReadReg(hid, blockAddr, regAddr):
         print(blockAddr, regAddr)
         recvList = pi20_i2c_read(hid, 0x80, blockAddr, regAddr)
 
+    print(f"read back data is {recvList}")
     return recvList
 
 def PI15WriteReg(hid, blockAddr, regAddr, data):

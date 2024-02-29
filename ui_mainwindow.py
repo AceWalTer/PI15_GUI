@@ -7,7 +7,16 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-
+"""
+    @File: test.py \n
+    @Contact: kaun.wang@pisemi.com \n
+    @License: (C)Copyright {} \n
+    @Modify Time: 2024/2/29 14:54 \n
+    @Author: Kuan Wang \n
+    @Version: 1.0 \n
+    @Description: None \n
+    @Create Time: 2024/2/29 14:54 \n
+"""
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
